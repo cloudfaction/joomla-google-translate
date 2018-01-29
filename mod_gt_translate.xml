@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Google Translate</name>
+    <author>M.J.Blokdijk, Cloudfaction, www.cloudfation.nl</author>
+    <version>1.0.0</version>
+    <description>Unleash the power of Google translate to your Joomla! website. Created by M.J.Blokdijk, Cloudfaction, www.cloudfaction.nl (Check options to change sytle)</description>
+    <files>
+        <filename>mod_gt_translate.xml</filename>
+        <filename module="mod_gt_translate">mod_gt_translate.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+    </files>
+<config>
+		<fields name="params">
+			<fieldset name="Basic">
+				<field name="BorderRadius" type="text" size="2" default="10" label="Border Radius" description="Border Radius in px." />
+				<field name="BackgroundColor" type="color" size="30" default="#ffffff" label="Background Color" description="Background Color"/>
+				<field name="TextColor" type="color" size="30" default="#000000" label="Text Color" description="Text color"/>
+				<field name="BorderWidth" type="text" size="30" default="1" label="Border Width" description="Border Width"/>
+				<field name="BorderColor" type="color" size="30" default="#eaeaea" label="Border Color" description="Border Color"/>
+			</fieldset>
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
